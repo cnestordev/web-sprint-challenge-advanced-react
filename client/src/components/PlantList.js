@@ -34,7 +34,7 @@ export default class PlantList extends Component {
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   render() {
 
-    if (this.state.filtered.length > 0) {
+    if (this.state.filtered.length > 0 && this.state.query.length > 0) {
       return (
         <main className="plant-list">
           <input onChange={this.handleSearch} placeholder="search by name" type="text" />
