@@ -55,10 +55,16 @@ test("form shows success message on submit with form details", async () => {
     const submitBtn = screen.getByRole('button', { name: /checkout/i })
     expect(submitBtn).toBeInTheDocument()
 
+    //click the checkout button
     fireEvent.click(submitBtn)
 
+    //check to see if success message is displayed
     const results = await screen.findByText('John Doe')
     expect(results).toBeInTheDocument()
 
+    const results2 = await screen.findByText('123 Fake St')
+    expect(results2).toBeInTheDocument()
 
+    const results3 = await screen.findByText('Clearwater, Utah 45600')
+    expect(results3).toBeInTheDocument()
 })
