@@ -29,14 +29,27 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+  
+  -You build a stateful class component by first declaring the class keyword followed by the name of the class.  You extend React.Component. The next thing you do inside the class body is call the constructor, optionally passing in props.  Inside the constructor, you call super and initalize state with this.state.  State will be an object.
+
+  The next thing you do is call the render method, and do all the logic inside there.  Lastly, use the return keyword to return jsx.
 
 2. Describe the different phases of the component lifecycle.
+  
+  -The mounting phase is when the component mounts to the DOM initially. This can be thought of as the birth of the component.
+
+  -The updating phase is when a component updates through state or props. This can be thought of as the growth/maturation of the component.
+
+  -lastly, the unmounting phase is when the component unmounts from the DOM.  This is thought of as the death of a component.
 
 3. Demonstrate an understanding of class component lifecycle methods.
+  Lifecycle methods allow us to capture a moment in time in the life cycle of a component. We are able to capture one of the three phases above and tell the component to do something when it reaches that phase.  For example, we can trigger an API call when the component first mounts using ComponentDidMount.  We can cleanup residual code when a component unmounts using their componentDidUnmount lifecycle.
 
 4. Define stateful logic.
+-Stateful logic is any code that uses state.
 
 5. Describe how to test a React component with React Testing Library.
+-You can test a react component by creating a test file and using the 'test' method to make an instance of a test.  The first argument takes in the title of the test and the second argument takes in a callback function which will hold all the tests you're running for that title.  You can use the render, screen, and fireEvent methods to test whether the text is being displayed or if a button properly submits a form.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
